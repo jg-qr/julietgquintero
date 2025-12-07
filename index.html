@@ -12,14 +12,48 @@
     images/about.jpg
     images/research.jpg
     images/projects.jpg
-    images/hobbies-fashion.jpg
-    images/hobbies-conventions.jpg
-    images/hobbies-color.jpg
-    images/hobbies-cities.jpg
-    images/hobbies-media.jpg
-    images/hobbies-science.jpg
-    images/hobbies-languages.jpg
-    images/hobbies-life.jpg
+
+    images/hobbies-fashion-clothing.jpg
+    images/hobbies-fashion-sewing.jpg
+    images/hobbies-fashion-cosplay.jpg
+    images/hobbies-fashion-dyed-hair.jpg
+    images/hobbies-fashion-modeling.jpg
+
+    images/hobbies-conventions-comiccon.jpg
+    images/hobbies-conventions-volunteer-work.jpg
+    images/hobbies-conventions-disney-vh1-snl.jpg
+    images/hobbies-conventions-redacted.jpg
+
+    images/hobbies-color-color.jpg
+    images/hobbies-color-rubiks-cube.jpg
+    images/hobbies-color-grace-hopper.jpg
+    images/hobbies-color-museums.jpg
+    images/hobbies-color-documentaries.jpg
+
+    images/hobbies-cities-mexico-city.jpg
+    images/hobbies-cities-boleros.jpg
+    images/hobbies-cities-north-sinaloa.jpg
+    images/hobbies-cities-tango.jpg
+    images/hobbies-cities-redacted.jpg
+
+    images/hobbies-media-photography.jpg
+    images/hobbies-media-cinematography-horror.jpg
+    images/hobbies-media-poetry.jpg
+
+    images/hobbies-science-mathematics.jpg
+    images/hobbies-science-science.jpg
+    images/hobbies-science-tech-people.jpg
+    images/hobbies-science-programming.jpg
+
+    images/hobbies-languages-german-english.jpg
+    images/hobbies-languages-music-singing.jpg
+
+    images/hobbies-life-dogs.jpg
+    images/hobbies-life-running.jpg
+    images/hobbies-life-video-games.jpg
+    images/hobbies-life-food.jpg
+    images/hobbies-life-airplanes.jpg
+    images/hobbies-life-random-facts.jpg
   -->
   <style>
     :root {
@@ -193,25 +227,27 @@
     }
 
     .hobby-item {
-      margin-top: 0.7rem;
+      margin-top: 0.9rem;
     }
 
     .hobby-item-title {
       font-weight: 500;
       font-size: 0.95rem;
+      margin-bottom: 0.1rem;
     }
 
     .hobby-item p {
       font-size: 0.9rem;
-      margin-top: 0.15rem;
+      margin-top: 0.1rem;
     }
 
-    .hobby-image {
-      width: 100%;
-      max-height: 180px;
+    .hobby-item-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 0.6rem;
       object-fit: cover;
-      border-radius: 0.75rem;
-      margin-bottom: 0.5rem;
+      display: block;
+      margin-bottom: 0.25rem;
     }
 
     /* Stack image and text on small screens for the top sections */
@@ -266,7 +302,9 @@
         <div class="section-text">
           <h2>About</h2>
           <p>
-           
+            I’m interested in wearable technology, data, and building things that connect research
+            with everyday life. I enjoy combining technical work with design and storytelling.
+            <!-- Replace with your own blurb if you want -->
           </p>
         </div>
       </section>
@@ -307,10 +345,14 @@
 
           <div class="projects-list">
             <div class="project">
-              <div class="project-title"></div>
-              <div class="project-meta"></div>
+              <div class="project-title">Smart Insole for Gait Analysis</div>
+              <div class="project-meta">2024 · personal project</div>
               <p>
-              
+                I am designing a low-cost smart insole with force sensors and a Raspberry Pi to measure how
+                people walk in everyday environments. The system collects plantar pressure data, sends it
+                over Bluetooth, and generates visualizations and logs for later analysis. This project
+                combines my interests in wearable devices, signal processing, and making health-related
+                technology more accessible.
               </p>
             </div>
 
@@ -344,14 +386,14 @@
 
         <!-- 1. Fashion & Style -->
         <div class="hobbies-category">
-          <img
-            src="images/hobbies-fashion.jpg"
-            alt="Fashion and style related photo"
-            class="hobby-image"
-          />
           <h3>Fashion & Style</h3>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-fashion-clothing.jpg"
+              alt="Clothing"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Clothing</div>
             <p>
               Clothing is one of my main forms of expression. I enjoy outfits that break monotony
@@ -360,6 +402,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-fashion-sewing.jpg"
+              alt="Sewing"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Sewing</div>
             <p>
               Sewing connects me to a family tradition that began with my grandmother’s strong
@@ -369,6 +416,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-fashion-cosplay.jpg"
+              alt="Cosplay"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Cosplay</div>
             <p>
               Cosplay lets me inhabit characters and worlds I love. It combines design, craft, and
@@ -377,6 +429,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-fashion-dyed-hair.jpg"
+              alt="Dyed hair"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Dyed hair</div>
             <p>
               I like experimenting with colored hair as another way to use color and style as
@@ -385,6 +442,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-fashion-modeling.jpg"
+              alt="Modeling"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Modeling</div>
             <p>
               I enjoy posing for photos or styling looks. It is partly performance and partly a way
@@ -395,14 +457,14 @@
 
         <!-- 2. Conventions & Pop Culture -->
         <div class="hobbies-category">
-          <img
-            src="images/hobbies-conventions.jpg"
-            alt="Conventions and pop culture photo"
-            class="hobby-image"
-          />
           <h3>Conventions & Pop Culture</h3>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-conventions-comiccon.jpg"
+              alt="Comic-Con, Anime Expo, WonderCon"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Comic-Con, Anime Expo, WonderCon</div>
             <p>
               I have volunteered at conventions like Comic-Con, Anime Expo, and WonderCon. These
@@ -412,6 +474,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-conventions-volunteer-work.jpg"
+              alt="Volunteer work"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Volunteer work</div>
             <p>
               Volunteering at events showed me how much effort goes into making creative spaces
@@ -420,6 +487,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-conventions-disney-vh1-snl.jpg"
+              alt="Disney, VH1, SNL, The New Yorker"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Disney, VH1, SNL, The New Yorker</div>
             <p>
               I enjoy pop culture in many forms—from animation and music channels to sketch comedy
@@ -428,6 +500,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-conventions-redacted.jpg"
+              alt="Redacted topic"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">REDACTED</div>
             <p>
               This topic is intentionally redacted in this public version of the site.
@@ -437,14 +514,14 @@
 
         <!-- 3. Color & Art -->
         <div class="hobbies-category">
-          <img
-            src="images/hobbies-color.jpg"
-            alt="Color and art related photo"
-            class="hobby-image"
-          />
           <h3>Color & Art</h3>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-color-color.jpg"
+              alt="Color"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Color</div>
             <p>
               Color affects how I think and feel. I pay attention to combinations that create
@@ -453,6 +530,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-color-rubiks-cube.jpg"
+              alt="Rubik’s Cube"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Rubik’s Cube</div>
             <p>
               Solving a Rubik’s Cube quickly is a playful way to explore patterns and algorithms in
@@ -461,6 +543,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-color-grace-hopper.jpg"
+              alt="Grace Hopper, applications, Canal Once"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Grace Hopper, applications, Canal Once</div>
             <p>
               I admire people and media that make technology more human. Stories about figures like
@@ -469,6 +556,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-color-museums.jpg"
+              alt="Museums, painting, history"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Museums, painting, history</div>
             <p>
               Museums, painting, and history help me see how each era leaves traces in images and
@@ -477,6 +569,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-color-documentaries.jpg"
+              alt="Documentaries"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Documentaries</div>
             <p>
               I often watch documentaries about art, science, or culture to see how complex topics
@@ -487,14 +584,14 @@
 
         <!-- 4. Cities & Culture -->
         <div class="hobbies-category">
-          <img
-            src="images/hobbies-cities.jpg"
-            alt="Cities and culture photo"
-            class="hobby-image"
-          />
           <h3>Cities & Culture</h3>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-cities-mexico-city.jpg"
+              alt="Mexico City"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Mexico City</div>
             <p>
               Mexico City inspires me with its layered history, museums, and neighborhoods. It feels
@@ -503,6 +600,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-cities-boleros.jpg"
+              alt="Boleros"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Boleros</div>
             <p>
               Boleros and older songs create a sense of nostalgia for places and eras I never lived
@@ -511,6 +613,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-cities-north-sinaloa.jpg"
+              alt="North / Sinaloa"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">North / Sinaloa</div>
             <p>
               The north, in particular, music, and identity. I appreciate it more as I grow older.
@@ -518,6 +625,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-cities-tango.jpg"
+              alt="Tango"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Tango</div>
             <p>
               I like the precision and emotion of tango, even when I am not dancing it regularly. It
@@ -526,6 +638,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-cities-redacted.jpg"
+              alt="Redacted topic"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">REDACTED</div>
             <p>
               This topic is intentionally redacted in this public version of the site.
@@ -535,14 +652,14 @@
 
         <!-- 5. Media & Storytelling -->
         <div class="hobbies-category">
-          <img
-            src="images/hobbies-media.jpg"
-            alt="Media and storytelling photo"
-            class="hobby-image"
-          />
           <h3>Media & Storytelling</h3>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-media-photography.jpg"
+              alt="Photography"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Photography</div>
             <p>
               Photography lets me capture small stories in light and composition, preserving how a
@@ -551,6 +668,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-media-cinematography-horror.jpg"
+              alt="Cinematography and horror films"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Cinematography and horror films</div>
             <p>
               I enjoy analyzing cinematography, especially in horror films—how framing, sound, and
@@ -559,6 +681,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-media-poetry.jpg"
+              alt="Poetry"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Poetry</div>
             <p>
               I read and sometimes write poetry. I like how a few lines can condense emotion,
@@ -569,14 +696,14 @@
 
         <!-- 6. Science & Learning -->
         <div class="hobbies-category">
-          <img
-            src="images/hobbies-science.jpg"
-            alt="Science and learning photo"
-            class="hobby-image"
-          />
           <h3>Science & Learning</h3>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-science-mathematics.jpg"
+              alt="Mathematics"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Mathematics</div>
             <p>
               Mathematics feels like a precise language for patterns and structure. It helps me
@@ -585,6 +712,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-science-science.jpg"
+              alt="Science"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Science</div>
             <p>
               I am curious about how things work and how scientific ideas reshape the way we see
@@ -593,6 +725,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-science-tech-people.jpg"
+              alt="Tech and people"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Tech and people</div>
             <p>
               I care about technology that is useful and accessible to people. I am especially
@@ -601,6 +738,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-science-programming.jpg"
+              alt="Programming"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Programming</div>
             <p>
               Programming feels a bit like running: repetitive, focused, and eventually freeing. I
@@ -611,14 +753,14 @@
 
         <!-- 7. Languages & Expression -->
         <div class="hobbies-category">
-          <img
-            src="images/hobbies-languages.jpg"
-            alt="Languages and expression photo"
-            class="hobby-image"
-          />
           <h3>Languages & Expression</h3>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-languages-german-english.jpg"
+              alt="German and English"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">German and English</div>
             <p>
               Learning languages helps me understand different ways of thinking. Each new structure
@@ -627,6 +769,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-languages-music-singing.jpg"
+              alt="Music and singing"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Music and singing</div>
             <p>
               Music and singing are ways for me to relax and express emotion. I enjoy songs that
@@ -637,14 +784,14 @@
 
         <!-- 8. Life & Motion -->
         <div class="hobbies-category">
-          <img
-            src="images/hobbies-life.jpg"
-            alt="Life and motion photo"
-            class="hobby-image"
-          />
           <h3>Life & Motion</h3>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-life-dogs.jpg"
+              alt="Dogs"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Dogs</div>
             <p>
               Dogs make me laugh and keep me grounded. Their presence makes ordinary days better.
@@ -652,6 +799,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-life-running.jpg"
+              alt="Running"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Running</div>
             <p>
               Running helps clear my mind and often gives me space to think through ideas or
@@ -660,6 +812,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-life-video-games.jpg"
+              alt="Video games"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Video games</div>
             <p>
               Games combine logic, narrative, and design. I like how interactive stories can feel
@@ -668,6 +825,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-life-food.jpg"
+              alt="Food"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Food</div>
             <p>
               Food for me is both creativity and comfort—trying new dishes, cooking, or connecting
@@ -676,6 +838,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-life-airplanes.jpg"
+              alt="Airplanes"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Airplanes</div>
             <p>
               Airports and airplanes fascinate me as symbols of movement, change, and connection
@@ -684,6 +851,11 @@
           </div>
 
           <div class="hobby-item">
+            <img
+              src="images/hobbies-life-random-facts.jpg"
+              alt="Random facts"
+              class="hobby-item-image"
+            />
             <div class="hobby-item-title">Random facts</div>
             <p>
               I like collecting random bits of information. They often become unexpected links
