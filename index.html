@@ -8,6 +8,19 @@
     name="description"
     content="Minimalist portfolio with about, research interests, projects, and hobbies."
   />
+  <!-- Expected images:
+    images/about.jpg
+    images/research.jpg
+    images/projects.jpg
+    images/hobbies-fashion.jpg
+    images/hobbies-conventions.jpg
+    images/hobbies-color.jpg
+    images/hobbies-cities.jpg
+    images/hobbies-media.jpg
+    images/hobbies-science.jpg
+    images/hobbies-languages.jpg
+    images/hobbies-life.jpg
+  -->
   <style>
     :root {
       --bg: #ffffff;
@@ -139,34 +152,6 @@
       text-decoration: underline;
     }
 
-    /* Hobbies layout */
-    .hobbies-category {
-      border: 1px solid var(--border);
-      border-radius: 0.75rem;
-      padding: 1rem 1.1rem;
-      margin-top: 1rem;
-    }
-
-    .hobbies-category h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-
-    .hobby-item {
-      margin-top: 0.7rem;
-    }
-
-    .hobby-item-title {
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    .hobby-item p {
-      font-size: 0.9rem;
-      margin-top: 0.15rem;
-    }
-
     footer {
       border-top: 1px solid var(--border);
       padding-top: 1rem;
@@ -175,7 +160,7 @@
       text-align: left;
     }
 
-    /* ===== Section images (side-by-side image + text) ===== */
+    /* ===== Section images (About / Research / Projects) ===== */
     .section-with-image {
       display: flex;
       gap: 1rem;
@@ -193,7 +178,43 @@
       flex: 1;
     }
 
-    /* Stack image and text on small screens */
+    /* ===== Hobbies layout ===== */
+    .hobbies-category {
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.1rem;
+      margin-top: 1.2rem;
+    }
+
+    .hobbies-category h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0.4rem 0;
+    }
+
+    .hobby-item {
+      margin-top: 0.7rem;
+    }
+
+    .hobby-item-title {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .hobby-item p {
+      font-size: 0.9rem;
+      margin-top: 0.15rem;
+    }
+
+    .hobby-image {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Stack image and text on small screens for the top sections */
     @media (max-width: 600px) {
       .section-with-image {
         flex-direction: column;
@@ -237,7 +258,6 @@
     <main>
       <!-- ABOUT -->
       <section id="about" class="section-with-image">
-        <!-- image: images/about.jpg -->
         <img
           src="images/about.jpg"
           alt="Portrait or representative image for the about section"
@@ -246,14 +266,13 @@
         <div class="section-text">
           <h2>About</h2>
           <p>
-         
+           
           </p>
         </div>
       </section>
 
       <!-- RESEARCH INTERESTS -->
       <section id="research" class="section-with-image">
-        <!-- image: images/research.jpg -->
         <img
           src="images/research.jpg"
           alt="Illustration or photo related to research and technology"
@@ -274,7 +293,6 @@
 
       <!-- PROJECTS -->
       <section id="projects" class="section-with-image">
-        <!-- image: images/projects.jpg -->
         <img
           src="images/projects.jpg"
           alt="Screenshot or collage of projects"
@@ -289,11 +307,10 @@
 
           <div class="projects-list">
             <div class="project">
-              <div class="project-title">Project title 1</div>
-              <div class="project-meta">Year · role / context</div>
+              <div class="project-title"></div>
+              <div class="project-meta"></div>
               <p>
-                Brief description of what the project was about and what you did. Mention data,
-                methods, or tools if relevant to your applications.
+              
               </p>
             </div>
 
@@ -318,324 +335,360 @@
       </section>
 
       <!-- HOBBIES -->
-      <section id="hobbies" class="section-with-image">
-        <!-- image: images/hobbies.jpg -->
-        <img
-          src="images/hobbies.jpg"
-          alt="Photo or collage related to hobbies"
-          class="section-image"
-        />
-        <div class="section-text">
-          <h2>Hobbies</h2>
-          <p class="muted">
-            These sections describe some of the activities and interests that shape my perspective
-            outside of formal work or study.
-          </p>
+      <section id="hobbies">
+        <h2>Hobbies</h2>
+        <p class="muted">
+          These sections describe some of the activities and interests that shape my perspective
+          outside of formal work or study.
+        </p>
 
-          <!-- 1. Fashion & Style -->
-          <div class="hobbies-category">
-            <h3>Fashion & Style</h3>
+        <!-- 1. Fashion & Style -->
+        <div class="hobbies-category">
+          <img
+            src="images/hobbies-fashion.jpg"
+            alt="Fashion and style related photo"
+            class="hobby-image"
+          />
+          <h3>Fashion & Style</h3>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Clothing</div>
-              <p>
-                Clothing is one of my main forms of expression. I enjoy outfits that break monotony
-                and suggest a story or mood.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Sewing</div>
-              <p>
-                Sewing connects me to a family tradition that began with my grandmother’s strong
-                sewing machine. Learning and practicing it feels like reclaiming something
-                generational.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Cosplay</div>
-              <p>
-                Cosplay lets me inhabit characters and worlds I love. It combines design, craft, and
-                performance in a playful way.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Dyed hair</div>
-              <p>
-                I like experimenting with colored hair as another way to use color and style as
-                personal language.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Modeling</div>
-              <p>
-                I enjoy posing for photos or styling looks. It is partly performance and partly a way
-                to see how ideas translate visually.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Clothing</div>
+            <p>
+              Clothing is one of my main forms of expression. I enjoy outfits that break monotony
+              and suggest a story or mood.
+            </p>
           </div>
 
-          <!-- 2. Conventions & Pop Culture -->
-          <div class="hobbies-category">
-            <h3>Conventions & Pop Culture</h3>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Comic-Con, Anime Expo, WonderCon</div>
-              <p>
-                I have volunteered at conventions like Comic-Con, Anime Expo, and WonderCon. These
-                spaces taught me to interact with new people, work in teams, and appreciate the
-                communities around art and fandom.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Volunteer work</div>
-              <p>
-                Volunteering at events showed me how much effort goes into making creative spaces
-                inclusive, organized, and welcoming.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Disney, VH1, SNL, The New Yorker</div>
-              <p>
-                I enjoy pop culture in many forms—from animation and music channels to sketch comedy
-                and cartoons. I like seeing how humor, design, and timing reflect collective ideas.
-              </p>
-            </div>
-
-         
+          <div class="hobby-item">
+            <div class="hobby-item-title">Sewing</div>
+            <p>
+              Sewing connects me to a family tradition that began with my grandmother’s strong
+              sewing machine. Learning and practicing it feels like reclaiming something
+              generational.
+            </p>
           </div>
 
-          <!-- 3. Color & Art -->
-          <div class="hobbies-category">
-            <h3>Color & Art</h3>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Color</div>
-              <p>
-                Color affects how I think and feel. I pay attention to combinations that create
-                balance, contrast, or surprise.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Rubik’s Cube</div>
-              <p>
-                Solving a Rubik’s Cube quickly is a playful way to explore patterns and algorithms in
-                a very tangible way.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Grace Hopper, applications, Canal Once</div>
-              <p>
-                I admire people and media that make technology more human. Stories about figures like
-                Grace Hopper or educational channels like Canal Once spark both curiosity and pride.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Museums, painting, history</div>
-              <p>
-                Museums, painting, and history help me see how each era leaves traces in images and
-                narratives. I like watching how techniques and stories evolve over time.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Documentaries</div>
-              <p>
-                I often watch documentaries about art, science, or culture to see how complex topics
-                can be explained clearly.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Cosplay</div>
+            <p>
+              Cosplay lets me inhabit characters and worlds I love. It combines design, craft, and
+              performance in a playful way.
+            </p>
           </div>
 
-          <!-- 4. Cities & Culture -->
-          <div class="hobbies-category">
-            <h3>Cities & Culture</h3>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Mexico City</div>
-              <p>
-                Mexico City inspires me with its layered history, museums, and neighborhoods. It feels
-                like walking through many times at once.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Boleros</div>
-              <p>
-                Boleros and older songs create a sense of nostalgia for places and eras I never lived
-                in but somehow feel connected to.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">North / Sinaloa</div>
-              <p>
-                The north, in particular, music, and identity. I
-                appreciate it more as I grow older.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Tango</div>
-              <p>
-                I like the precision and emotion of tango, even when I am not dancing it regularly. It
-                combines structure with intensity.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">REDACTED</div>
-              <p>
-                This topic is intentionally redacted in this public version of the site.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Dyed hair</div>
+            <p>
+              I like experimenting with colored hair as another way to use color and style as
+              personal language.
+            </p>
           </div>
 
-          <!-- 5. Media & Storytelling -->
-          <div class="hobbies-category">
-            <h3>Media & Storytelling</h3>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Modeling</div>
+            <p>
+              I enjoy posing for photos or styling looks. It is partly performance and partly a way
+              to see how ideas translate visually.
+            </p>
+          </div>
+        </div>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Photography</div>
-              <p>
-                Photography lets me capture small stories in light and composition, preserving how a
-                moment felt.
-              </p>
-            </div>
+        <!-- 2. Conventions & Pop Culture -->
+        <div class="hobbies-category">
+          <img
+            src="images/hobbies-conventions.jpg"
+            alt="Conventions and pop culture photo"
+            class="hobby-image"
+          />
+          <h3>Conventions & Pop Culture</h3>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Cinematography and horror films</div>
-              <p>
-                I enjoy analyzing cinematography, especially in horror films—how framing, sound, and
-                silence work together to build tension.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Poetry</div>
-              <p>
-                I read and sometimes write poetry. I like how a few lines can condense emotion,
-                rhythm, and thought.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Comic-Con, Anime Expo, WonderCon</div>
+            <p>
+              I have volunteered at conventions like Comic-Con, Anime Expo, and WonderCon. These
+              spaces taught me to interact with new people, work in teams, and appreciate the
+              communities around art and fandom.
+            </p>
           </div>
 
-          <!-- 6. Science & Learning -->
-          <div class="hobbies-category">
-            <h3>Science & Learning</h3>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Mathematics</div>
-              <p>
-                Mathematics feels like a precise language for patterns and structure. It helps me
-                think clearly.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Science</div>
-              <p>
-                I am curious about how things work and how scientific ideas reshape the way we see
-                everyday life.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Tech and people</div>
-              <p>
-                I care about technology that is useful and accessible to people. I am especially
-                interested in open-source and inclusive design.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Programming</div>
-              <p>
-                Programming feels a bit like running: repetitive, focused, and eventually freeing. I
-                like how it combines logic with creativity.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Volunteer work</div>
+            <p>
+              Volunteering at events showed me how much effort goes into making creative spaces
+              inclusive, organized, and welcoming.
+            </p>
           </div>
 
-          <!-- 7. Languages & Expression -->
-          <div class="hobbies-category">
-            <h3>Languages & Expression</h3>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">German and English</div>
-              <p>
-                Learning languages helps me understand different ways of thinking. Each new structure
-                or phrase opens a small window into another culture.
-              </p>
-            </div>
-
-            <div class="hobby-item">
-              <div class="hobby-item-title">Music and singing</div>
-              <p>
-                Music and singing are ways for me to relax and express emotion. I enjoy songs that
-                tell stories or play with harmony.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Disney, VH1, SNL, The New Yorker</div>
+            <p>
+              I enjoy pop culture in many forms—from animation and music channels to sketch comedy
+              and cartoons. I like seeing how humor, design, and timing reflect collective ideas.
+            </p>
           </div>
 
-          <!-- 8. Life & Motion -->
-          <div class="hobbies-category">
-            <h3>Life & Motion</h3>
+          <div class="hobby-item">
+            <div class="hobby-item-title">REDACTED</div>
+            <p>
+              This topic is intentionally redacted in this public version of the site.
+            </p>
+          </div>
+        </div>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Dogs</div>
-              <p>
-                Dogs make me laugh and keep me grounded. Their presence makes ordinary days better.
-              </p>
-            </div>
+        <!-- 3. Color & Art -->
+        <div class="hobbies-category">
+          <img
+            src="images/hobbies-color.jpg"
+            alt="Color and art related photo"
+            class="hobby-image"
+          />
+          <h3>Color & Art</h3>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Running</div>
-              <p>
-                Running helps clear my mind and often gives me space to think through ideas or
-                decisions.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Color</div>
+            <p>
+              Color affects how I think and feel. I pay attention to combinations that create
+              balance, contrast, or surprise.
+            </p>
+          </div>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Video games</div>
-              <p>
-                Games combine logic, narrative, and design. I like how interactive stories can feel
-                different each time.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Rubik’s Cube</div>
+            <p>
+              Solving a Rubik’s Cube quickly is a playful way to explore patterns and algorithms in
+              a very tangible way.
+            </p>
+          </div>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Food</div>
-              <p>
-                Food for me is both creativity and comfort—trying new dishes, cooking, or connecting
-                memories with flavors.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Grace Hopper, applications, Canal Once</div>
+            <p>
+              I admire people and media that make technology more human. Stories about figures like
+              Grace Hopper or educational channels like Canal Once spark both curiosity and pride.
+            </p>
+          </div>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Airplanes</div>
-              <p>
-                Airports and airplanes fascinate me as symbols of movement, change, and connection
-                between places.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Museums, painting, history</div>
+            <p>
+              Museums, painting, and history help me see how each era leaves traces in images and
+              narratives. I like watching how techniques and stories evolve over time.
+            </p>
+          </div>
 
-            <div class="hobby-item">
-              <div class="hobby-item-title">Random facts</div>
-              <p>
-                I like collecting random bits of information. They often become unexpected links
-                between topics later on.
-              </p>
-            </div>
+          <div class="hobby-item">
+            <div class="hobby-item-title">Documentaries</div>
+            <p>
+              I often watch documentaries about art, science, or culture to see how complex topics
+              can be explained clearly.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. Cities & Culture -->
+        <div class="hobbies-category">
+          <img
+            src="images/hobbies-cities.jpg"
+            alt="Cities and culture photo"
+            class="hobby-image"
+          />
+          <h3>Cities & Culture</h3>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Mexico City</div>
+            <p>
+              Mexico City inspires me with its layered history, museums, and neighborhoods. It feels
+              like walking through many times at once.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Boleros</div>
+            <p>
+              Boleros and older songs create a sense of nostalgia for places and eras I never lived
+              in but somehow feel connected to.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">North / Sinaloa</div>
+            <p>
+              The north, in particular, music, and identity. I appreciate it more as I grow older.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Tango</div>
+            <p>
+              I like the precision and emotion of tango, even when I am not dancing it regularly. It
+              combines structure with intensity.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">REDACTED</div>
+            <p>
+              This topic is intentionally redacted in this public version of the site.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Media & Storytelling -->
+        <div class="hobbies-category">
+          <img
+            src="images/hobbies-media.jpg"
+            alt="Media and storytelling photo"
+            class="hobby-image"
+          />
+          <h3>Media & Storytelling</h3>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Photography</div>
+            <p>
+              Photography lets me capture small stories in light and composition, preserving how a
+              moment felt.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Cinematography and horror films</div>
+            <p>
+              I enjoy analyzing cinematography, especially in horror films—how framing, sound, and
+              silence work together to build tension.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Poetry</div>
+            <p>
+              I read and sometimes write poetry. I like how a few lines can condense emotion,
+              rhythm, and thought.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Science & Learning -->
+        <div class="hobbies-category">
+          <img
+            src="images/hobbies-science.jpg"
+            alt="Science and learning photo"
+            class="hobby-image"
+          />
+          <h3>Science & Learning</h3>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Mathematics</div>
+            <p>
+              Mathematics feels like a precise language for patterns and structure. It helps me
+              think clearly.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Science</div>
+            <p>
+              I am curious about how things work and how scientific ideas reshape the way we see
+              everyday life.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Tech and people</div>
+            <p>
+              I care about technology that is useful and accessible to people. I am especially
+              interested in open-source and inclusive design.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Programming</div>
+            <p>
+              Programming feels a bit like running: repetitive, focused, and eventually freeing. I
+              like how it combines logic with creativity.
+            </p>
+          </div>
+        </div>
+
+        <!-- 7. Languages & Expression -->
+        <div class="hobbies-category">
+          <img
+            src="images/hobbies-languages.jpg"
+            alt="Languages and expression photo"
+            class="hobby-image"
+          />
+          <h3>Languages & Expression</h3>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">German and English</div>
+            <p>
+              Learning languages helps me understand different ways of thinking. Each new structure
+              or phrase opens a small window into another culture.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Music and singing</div>
+            <p>
+              Music and singing are ways for me to relax and express emotion. I enjoy songs that
+              tell stories or play with harmony.
+            </p>
+          </div>
+        </div>
+
+        <!-- 8. Life & Motion -->
+        <div class="hobbies-category">
+          <img
+            src="images/hobbies-life.jpg"
+            alt="Life and motion photo"
+            class="hobby-image"
+          />
+          <h3>Life & Motion</h3>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Dogs</div>
+            <p>
+              Dogs make me laugh and keep me grounded. Their presence makes ordinary days better.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Running</div>
+            <p>
+              Running helps clear my mind and often gives me space to think through ideas or
+              decisions.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Video games</div>
+            <p>
+              Games combine logic, narrative, and design. I like how interactive stories can feel
+              different each time.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Food</div>
+            <p>
+              Food for me is both creativity and comfort—trying new dishes, cooking, or connecting
+              memories with flavors.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Airplanes</div>
+            <p>
+              Airports and airplanes fascinate me as symbols of movement, change, and connection
+              between places.
+            </p>
+          </div>
+
+          <div class="hobby-item">
+            <div class="hobby-item-title">Random facts</div>
+            <p>
+              I like collecting random bits of information. They often become unexpected links
+              between topics later on.
+            </p>
           </div>
         </div>
       </section>
