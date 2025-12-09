@@ -228,6 +228,9 @@
 
     .hobby-item {
       margin-top: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
     }
 
     .hobby-item-title {
@@ -241,17 +244,34 @@
       margin-top: 0.1rem;
     }
 
-  .hobby-item-image {
-  width: 140px;    /* was 80px */
-  height: 140px;   /* was 80px */
-  border-radius: 0.6rem;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 0.5rem; /* a bit more space under the image */
-}
+    .hobby-item-text {
+      flex: 1;
+    }
 
+    .hobby-item-image {
+      width: 140px;
+      height: 140px;
+      border-radius: 0.6rem;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+      margin-bottom: 0;
+    }
 
-    /* Stack image and text on small screens for the top sections */
+    /* Alternate PIC–TEXT / TEXT–PIC within each hobbies category */
+    .hobbies-category .hobby-item:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* For items with multiple images (e.g., Running) */
+    .hobby-item-images {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* Stack image and text on small screens for the top sections and hobbies */
     @media (max-width: 600px) {
       .section-with-image {
         flex-direction: column;
@@ -259,6 +279,16 @@
 
       .section-image {
         max-width: 100%;
+      }
+
+      .hobbies-category .hobby-item,
+      .hobbies-category .hobby-item:nth-of-type(even) {
+        flex-direction: column;
+      }
+
+      .hobby-item-image {
+        width: 100%;
+        height: auto;
       }
     }
 
@@ -295,24 +325,26 @@
     <main>
       <!-- ABOUT -->
       <section id="about" class="section-with-image">
-       
+        <!-- Optional image:
+        <img src="images/about.jpg" alt="About" class="section-image" />
+        -->
         <div class="section-text">
           <h2>About</h2>
           <p>
             I’m interested in wearable technology, data, and building things that connect research
             with everyday life. I enjoy combining technical work with design and storytelling.
-            
           </p>
         </div>
       </section>
 
       <!-- RESEARCH INTERESTS -->
       <section id="research" class="section-with-image">
-       
+        <!-- Optional image:
+        <img src="images/research.jpg" alt="Research" class="section-image" />
+        -->
         <div class="section-text">
           <h2>Research Interests</h2>
           <p class="muted">
-          
           </p>
           <ul>
             <li>Wearables</li>
@@ -324,11 +356,12 @@
 
       <!-- PROJECTS -->
       <section id="projects" class="section-with-image">
-     
+        <!-- Optional image:
+        <img src="images/projects.jpg" alt="Projects" class="section-image" />
+        -->
         <div class="section-text">
           <h2>Selected Projects</h2>
           <p class="muted">
-            
           </p>
 
           <div class="projects-list">
@@ -336,16 +369,15 @@
               <div class="project-title">Smart Insole for Gait Analysis</div>
               <div class="project-meta">2025 · independent research project</div>
               <p>
-              I am designing a low-cost smart insole with FSR sensors and a Raspberry Pi to measure how people walk in
-              everyday environments. The system collects plantar pressure data, sends it over Bluetooth to a smartphone, 
-              and generates visualizations and logs for later analysis. I am currently testing it with a small group of 
-              3–4 people, and I am adding machine learning features to create gait profiles and send real-time alerts. 
-              This project combines my interests in wearable devices, circuit design, signal processing, and making
-              health-related technology more accessible.
+                I am designing a low-cost smart insole with FSR sensors and a Raspberry Pi to measure how people walk in
+                everyday environments. The system collects plantar pressure data, sends it over Bluetooth to a smartphone, 
+                and generates visualizations and logs for later analysis. I am currently testing it with a small group of 
+                3–4 people, and I am adding machine learning features to create gait profiles and send real-time alerts. 
+                This project combines my interests in wearable devices, circuit design, signal processing, and making
+                health-related technology more accessible.
               </p>
             </div>
 
-    
             <div class="project">
               <div class="project-title">Professional Experience</div>
               <div class="project-meta">Current · Sr Software Engineer </div>
@@ -356,7 +388,7 @@
               </p>
             </div>
 
-                  <div class="project">
+            <div class="project">
               <div class="project-title">Professional Experience</div>
               <div class="project-meta">2022 · Data Scientist </div>
               <p>
@@ -365,17 +397,14 @@
               </p>
             </div>
 
-
-             <div class="project">
+            <div class="project">
               <div class="project-title">Professional Residence</div>
               <div class="project-meta">2020 · Lead Developer (Professional Residency)/ Health Clinic</div>
               <p>
-              • Led the fully automation of the inventory and medicine dispatch process
-              • Assembled a scheduling system to digitalize the creation and tracking of appointments
+                • Led the fully automation of the inventory and medicine dispatch process
+                • Assembled a scheduling system to digitalize the creation and tracking of appointments
               </p>
             </div>
-            
-            
           </div>
         </div>
       </section>
@@ -383,7 +412,6 @@
       <!-- HOBBIES -->
       <section id="hobbies">
         <h2>Hobbies</h2>
-     
 
         <!-- 1. Fashion & Style -->
         <div class="hobbies-category">
@@ -395,14 +423,14 @@
               alt="Clothing"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Clothing</div>
-            <p>
-              Clothing is one of my main forms of expression. I enjoy outfits that break monotony
-              and suggest a story or mood.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Clothing</div>
+              <p>
+                Clothing is one of my main forms of expression. I enjoy outfits that break monotony
+                and suggest a story or mood.
+              </p>
+            </div>
           </div>
-
-        
 
           <div class="hobby-item">
             <img
@@ -410,28 +438,28 @@
               alt="Cosplay"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Cosplay</div>
-            <p>
-              Cosplay lets me inhabit characters and worlds I love. It combines design, craft, and
-              performance in a playful way.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Cosplay</div>
+              <p>
+                Cosplay lets me inhabit characters and worlds I love. It combines design, craft, and
+                performance in a playful way.
+              </p>
+            </div>
           </div>
 
-        
-          
-
           <div class="hobby-item">
-           <img
-          src="images/hobbies-fashion-modeling.jpeg"
-          alt="Modeling"
-          class="hobby-item-image"
-          />
-
-            <div class="hobby-item-title">Modeling</div>
-            <p>
-              I enjoy posing for photos or styling looks. It is partly performance and partly a way
-              to see how ideas translate visually.
-            </p>
+            <img
+              src="images/hobbies-fashion-modeling.jpeg"
+              alt="Modeling"
+              class="hobby-item-image"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Modeling</div>
+              <p>
+                I enjoy posing for photos or styling looks. It is partly performance and partly a way
+                to see how ideas translate visually.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -445,12 +473,14 @@
               alt="Comic-Con, Anime Expo, WonderCon"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Comic-Con, Anime Expo, WonderCon</div>
-            <p>
-              I have volunteered at conventions like Comic-Con, Anime Expo, and WonderCon. These
-              spaces taught me to interact with new people, work in teams, and appreciate the
-              communities around art and fandom.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Comic-Con, Anime Expo, WonderCon</div>
+              <p>
+                I have volunteered at conventions like Comic-Con, Anime Expo, and WonderCon. These
+                spaces taught me to interact with new people, work in teams, and appreciate the
+                communities around art and fandom.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -459,13 +489,14 @@
               alt="Disney, VH1, SNL, The New Yorker"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Disney, VH1, SNL, The New Yorker</div>
-            <p>
-              I enjoy pop culture in many forms—from animation and music channels to sketch comedy
-              and cartoons. I like seeing how humor, design, and timing reflect collective ideas.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Disney, VH1, SNL, The New Yorker</div>
+              <p>
+                I enjoy pop culture in many forms—from animation and music channels to sketch comedy
+                and cartoons. I like seeing how humor, design, and timing reflect collective ideas.
+              </p>
+            </div>
           </div>
- 
         </div>
 
         <!-- 3. Color & Art -->
@@ -478,25 +509,28 @@
               alt="Color"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Color</div>
-            <p>
-              Color affects how I think and feel. I pay attention to combinations that create
-              balance, contrast, or surprise.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Color</div>
+              <p>
+                Color affects how I think and feel. I pay attention to combinations that create
+                balance, contrast, or surprise.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
-           <img
-          src="images/hobbies-color-rubiks-cube.jpeg"
-          alt="Rubik’s Cube"
-          class="hobby-item-image"
-        />
-
-            <div class="hobby-item-title">Rubik’s Cube</div>
-            <p>
-            Solving a Rubik’s Cube quickly is a playful way to explore patterns and algorithms in a very tangible way. 
-            My personal best is approximately 19 seconds—though I haven’t practiced in over a decade.
-            </p>
+            <img
+              src="images/hobbies-color-rubiks-cube.jpeg"
+              alt="Rubik’s Cube"
+              class="hobby-item-image"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Rubik’s Cube</div>
+              <p>
+                Solving a Rubik’s Cube quickly is a playful way to explore patterns and algorithms in a very tangible way. 
+                My personal best is approximately 19 seconds—though I haven’t practiced in over a decade.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -505,27 +539,30 @@
               alt="Grace Hopper, applications, Canal Once"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Grace Hopper, Applications, Canal Once In Mexico</div>
-            <p>
-              I admire people and media that make technology more human. Stories about figures like
-              Grace Hopper. 
-              Since I was a child, Canal Once—a free public channel run by a university in Mexico City—was a major source of inspiration for me. 
-              Its children’s educational programs were creative, clear, and deeply inspiring, and they sparked my interest in learning and sharing knowledge from an early age.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Grace Hopper, Applications, Canal Once In Mexico</div>
+              <p>
+                I admire people and media that make technology more human. Stories about figures like
+                Grace Hopper. 
+                Since I was a child, Canal Once—a free public channel run by a university in Mexico City—was a major source of inspiration for me. 
+                Its children’s educational programs were creative, clear, and deeply inspiring, and they sparked my interest in learning and sharing knowledge from an early age.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
-          <img
-  src="images/hobbies-color-museumsspace.jpeg"
-  alt="Museums, painting, history"
-  class="hobby-item-image"
-/>
-
-            <div class="hobby-item-title">Museums, painting, history</div>
-            <p>
-              Museums, painting, and history help me see how each era leaves traces in images and
-              narratives. I like watching how techniques and stories evolve over time.
-            </p>
+            <img
+              src="images/hobbies-color-museumsspace.jpeg"
+              alt="Museums, painting, history"
+              class="hobby-item-image"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Museums, painting, history</div>
+              <p>
+                Museums, painting, and history help me see how each era leaves traces in images and
+                narratives. I like watching how techniques and stories evolve over time.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -534,11 +571,13 @@
               alt="Documentaries"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Documentaries</div>
-            <p>
-              I often watch documentaries about art, science, or culture to see how complex topics
-              can be explained clearly.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Documentaries</div>
+              <p>
+                I often watch documentaries about art, science, or culture to see how complex topics
+                can be explained clearly.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -552,11 +591,13 @@
               alt="Mexico City"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Mexico City</div>
-            <p>
-              Mexico City inspires me with its layered history, museums, and neighborhoods. It feels
-              like walking through many times at once.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Mexico City</div>
+              <p>
+                Mexico City inspires me with its layered history, museums, and neighborhoods. It feels
+                like walking through many times at once.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -565,11 +606,13 @@
               alt="Boleros"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Boleros</div>
-            <p>
-              Boleros and older songs create a sense of nostalgia for places and eras I never lived
-              in but somehow feel connected to.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Boleros</div>
+              <p>
+                Boleros and older songs create a sense of nostalgia for places and eras I never lived
+                in but somehow feel connected to.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -578,38 +621,37 @@
               alt="North / Sinaloa"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">North / Sinaloa</div>
-            <p>
-             The north, especially its music and sense of identity, means more to me as I grow older. It’s not just that I “got older” and 
-              suddenly became nostalgic. It’s that I moved to a completely different city, where the culture feels worlds apart from what 
-              I grew up with. And now that the things I once took for granted aren’t “the normal” around me anymore, I appreciate them in a deeper,
-              more conscious way. The music, the accents, the food, the small habits—everything that shaped my idea of home—has become something 
-              I value not out of sentimentality, but out of recognition. Distance showed me how much it forms part of who I am.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">North / Sinaloa</div>
+              <p>
+                The north, especially its music and sense of identity, means more to me as I grow older. It’s not just that I “got older” and 
+                suddenly became nostalgic. It’s that I moved to a completely different city, where the culture feels worlds apart from what 
+                I grew up with. And now that the things I once took for granted aren’t “the normal” around me anymore, I appreciate them in a deeper,
+                more conscious way. The music, the accents, the food, the small habits—everything that shaped my idea of home—has become something 
+                I value not out of sentimentality, but out of recognition. Distance showed me how much it forms part of who I am.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
-          <img
-          src="images/hobbies-cities-tango.jpeg"
-          alt="Tango"
-          class="hobby-item-image"
-        />
-
-            <div class="hobby-item-title">Tango</div>
-            <p>
-              I like the precision and emotion of tango, I love Valz tango. It
-              combines structure with intensity.
-            </p>
+            <img
+              src="images/hobbies-cities-tango.jpeg"
+              alt="Tango"
+              class="hobby-item-image"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Tango</div>
+              <p>
+                I like the precision and emotion of tango, I love Valz tango. It
+                combines structure with intensity.
+              </p>
+            </div>
           </div>
-
-        
         </div>
 
         <!-- 5. Media & Storytelling -->
         <div class="hobbies-category">
           <h3>Media & Storytelling</h3>
-
-         
 
           <div class="hobby-item">
             <img
@@ -617,13 +659,15 @@
               alt="Cinematography and horror films"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Cinematography and horror films</div>
-            <p>
-            I’ve also won movie trivia competitions, including twice winning the national Cinemex trivia by correctly predicting the Oscar results,
-            which earned me free movies for a year each time. I also won a regional trivia event hosted by a television network, which gave me access to premieres 
-            (unfortunately, this was in 2020…).
-            I enjoy analyzing cinematography, especially in horror films—how framing, sound, and silence work together to build tension.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Cinematography and horror films</div>
+              <p>
+                I’ve also won movie trivia competitions, including twice winning the national Cinemex trivia by correctly predicting the Oscar results,
+                which earned me free movies for a year each time. I also won a regional trivia event hosted by a television network, which gave me access to premieres 
+                (unfortunately, this was in 2020…).
+                I enjoy analyzing cinematography, especially in horror films—how framing, sound, and silence work together to build tension.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -632,11 +676,13 @@
               alt="Poetry"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Poetry</div>
-            <p>
-            I enjoy poetry, especially modernist work, which I became more interested in after watching Paterson. I also enjoy haikus,
-            and I like writing poetry in three languages—it helps me play with rhythm, tone, and meaning in different ways.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Poetry</div>
+              <p>
+                I enjoy poetry, especially modernist work, which I became more interested in after watching Paterson. I also enjoy haikus,
+                and I like writing poetry in three languages—it helps me play with rhythm, tone, and meaning in different ways.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -650,21 +696,27 @@
               alt="Mathematics"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Mathematics</div>
-            <p>
-              Mathematics feels like a precise language for patterns and structure. It helps me
-              think clearly.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Mathematics</div>
+              <p>
+                Mathematics feels like a precise language for patterns and structure. It helps me
+                think clearly.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
-         <img
-  src="images/hobbies-science-scienceposter.jpeg"
-  alt="Science"
-  class="hobby-item-image"
-/>
-
-           
+            <img
+              src="images/hobbies-science-scienceposter.jpeg"
+              alt="Science poster"
+              class="hobby-item-image"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Science</div>
+              <p>
+                <!-- Optional text about science posters or conferences -->
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -673,11 +725,13 @@
               alt="Tech and people"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Tech and people</div>
-            <p>
-              I care about technology that is useful and accessible to people. I am especially
-              interested in open-source and inclusive design.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Tech and people</div>
+              <p>
+                I care about technology that is useful and accessible to people. I am especially
+                interested in open-source and inclusive design.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -686,11 +740,13 @@
               alt="Programming"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Programming</div>
-            <p>
-              Programming feels a bit like running: repetitive, focused, and eventually freeing. I
-              like how it combines logic with creativity.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Programming</div>
+              <p>
+                Programming feels a bit like running: repetitive, focused, and eventually freeing. I
+                like how it combines logic with creativity.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -704,11 +760,13 @@
               alt="German and English"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">German and English</div>
-            <p>
-              Learning languages helps me understand different ways of thinking. Each new structure
-              or phrase opens a small window into another culture.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">German and English</div>
+              <p>
+                Learning languages helps me understand different ways of thinking. Each new structure
+                or phrase opens a small window into another culture.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -717,14 +775,16 @@
               alt="Music and singing"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Music and singing</div>
-            <p>
-              I spend about 6% of my day—every single day—listening to music, and even more time outside a certain platform. Over the years, 
-              I’ve explored new genres, learned how samples are made, and gotten curious about the origins of different musical styles. 
-              I really enjoy listening to full albums, discovering how each track fits into a bigger story. 
-              Music and singing are ways for me to relax and express emotion. I enjoy songs that
-              tell stories or play with harmony.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Music and singing</div>
+              <p>
+                I spend about 6% of my day—every single day—listening to music, and even more time outside a certain platform. Over the years, 
+                I’ve explored new genres, learned how samples are made, and gotten curious about the origins of different musical styles. 
+                I really enjoy listening to full albums, discovering how each track fits into a bigger story. 
+                Music and singing are ways for me to relax and express emotion. I enjoy songs that
+                tell stories or play with harmony.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -738,28 +798,34 @@
               alt="Dogs"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Dogs</div>
-            <p>
-              Dogs make me laugh and keep me grounded. Their presence makes ordinary days better.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Dogs</div>
+              <p>
+                Dogs make me laugh and keep me grounded. Their presence makes ordinary days better.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
-            <img
-              src="images/hobbies-life-running.jpeg"
-              alt="Running"
-              class="hobby-item-image"
-            />
+            <div class="hobby-item-images">
               <img
-              src="images/hobbies-life-runningHalf.jpeg"
-              alt="Running"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-title">Running</div>
-            <p>
-              Running helps clear my mind and often gives me space to think through ideas or
-              decisions.
-            </p>
+                src="images/hobbies-life-running.jpeg"
+                alt="Running"
+                class="hobby-item-image"
+              />
+              <img
+                src="images/hobbies-life-runningHalf.jpeg"
+                alt="Running half-marathon"
+                class="hobby-item-image"
+              />
+            </div>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Running</div>
+              <p>
+                Running helps clear my mind and often gives me space to think through ideas or
+                decisions.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -768,11 +834,13 @@
               alt="Video games"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Video games</div>
-            <p>
-              Games combine logic, narrative, and design. I like how interactive stories can feel
-              different each time.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Video games</div>
+              <p>
+                Games combine logic, narrative, and design. I like how interactive stories can feel
+                different each time.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -781,12 +849,14 @@
               alt="Food"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Food</div>
-            <p>
-          I also love exploring international gastronomy and discovering dishes from different cultures. Some of my favorites are Greek food (Gyros FTW),
-          “tacos árabes,” German dishes, Ecuadorian cuisine, arepas, sushi, Mexican-Chinese fusion, American, French, and Polish food, among many others.
-          Trying new flavors is one of my favorite ways to understand a place—its traditions, its people, and the little stories that live in its food.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Food</div>
+              <p>
+                I also love exploring international gastronomy and discovering dishes from different cultures. Some of my favorites are Greek food (Gyros FTW),
+                “tacos árabes,” German dishes, Ecuadorian cuisine, arepas, sushi, Mexican-Chinese fusion, American, French, and Polish food, among many others.
+                Trying new flavors is one of my favorite ways to understand a place—its traditions, its people, and the little stories that live in its food.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -795,11 +865,13 @@
               alt="Airplanes"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Airplanes</div>
-            <p>
-              Airports and airplanes fascinate me as symbols of movement, change, and connection
-              between places.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Airplanes</div>
+              <p>
+                Airports and airplanes fascinate me as symbols of movement, change, and connection
+                between places.
+              </p>
+            </div>
           </div>
 
           <div class="hobby-item">
@@ -808,10 +880,12 @@
               alt="Random facts"
               class="hobby-item-image"
             />
-            <div class="hobby-item-title">Random facts</div>
-            <p>
-             I spend about at least three hours a day reading about different topics.
-            </p>
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Random facts</div>
+              <p>
+                I spend about at least three hours a day reading about different topics.
+              </p>
+            </div>
           </div>
         </div>
       </section>
