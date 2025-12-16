@@ -2,59 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Juliet G Quintero - Portfolio</title>
+  <title>Juliet G Quintero — PhD Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Minimalist portfolio with about, research interests, projects, and hobbies."
+    content="PhD-oriented portfolio: research interests, featured wearable project, experience, and curated 'Beyond the Lab' section."
   />
-  <!-- Expected images:
-    images/about.jpg
-    images/research.jpg
-    images/projects.jpg
 
-    images/hobbies-fashion-clothing.jpg
-    images/hobbies-fashion-sewing.jpg
-    images/hobbies-fashion-cosplay.jpg
-    images/hobbies-fashion-dyed-hair.jpg
-    images/hobbies-fashion-modeling.jpg
-
-    images/hobbies-conventions-comiccon.jpg
-    images/hobbies-conventions-volunteer-work.jpg
-    images/hobbies-conventions-disney-vh1-snl.jpg
-    images/hobbies-conventions-redacted.jpg
-
-    images/hobbies-color-color.jpg
-    images/hobbies-color-rubiks-cube.jpg
-    images/hobbies-color-grace-hopper.jpg
-    images/hobbies-color-museums.jpg
-    images/hobbies-color-documentaries.jpg
-
-    images/hobbies-cities-mexico-city.jpg
-    images/hobbies-cities-boleros.jpg
-    images/hobbies-cities-north-sinaloa.jpg
-    images/hobbies-cities-tango.jpg
-    images/hobbies-cities-redacted.jpg
-
-    images/hobbies-media-photography.jpg
-    images/hobbies-media-cinematography-horror.jpg
-    images/hobbies-media-poetry.jpg
-
-    images/hobbies-science-mathematics.jpg
-    images/hobbies-science-science.jpg
-    images/hobbies-science-tech-people.jpg
-    images/hobbies-science-programming.jpg
-
-    images/hobbies-languages-german-english.jpg
-    images/hobbies-languages-music-singing.jpg
-
-    images/hobbies-life-dogs.jpg
-    images/hobbies-life-running.jpg
-    images/hobbies-life-video-games.jpg
-    images/hobbies-life-food.jpg
-    images/hobbies-life-airplanes.jpg
-    images/hobbies-life-random-facts.jpg
-  -->
   <style>
     :root {
       --bg: #ffffff;
@@ -65,15 +19,9 @@
       --max-width: 900px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -83,10 +31,7 @@
       padding: 1.5rem;
     }
 
-    .page {
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
+    .page { max-width: var(--max-width); margin: 0 auto; }
 
     header {
       display: flex;
@@ -95,15 +40,12 @@
       margin-bottom: 2.5rem;
     }
 
-    header h1 {
-      font-size: 1.6rem;
-      font-weight: 600;
-    }
+    header h1 { font-size: 1.6rem; font-weight: 600; }
 
     header p {
       font-size: 0.9rem;
       color: var(--muted);
-      max-width: 32rem;
+      max-width: 40rem;
     }
 
     nav {
@@ -121,10 +63,7 @@
       border-radius: 999px;
     }
 
-    nav a:hover {
-      color: var(--fg);
-      background-color: #f3f4f6;
-    }
+    nav a:hover { color: var(--fg); background-color: #f3f4f6; }
 
     main {
       display: flex;
@@ -133,9 +72,7 @@
       margin-bottom: 3rem;
     }
 
-    section {
-      padding-top: 0.5rem;
-    }
+    section { padding-top: 0.5rem; }
 
     section h2 {
       font-size: 1.2rem;
@@ -143,48 +80,15 @@
       margin-bottom: 0.5rem;
     }
 
-    section p,
-    section li {
-      font-size: 0.95rem;
-    }
+    section p, section li { font-size: 0.95rem; }
 
-    .muted {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+    .muted { color: var(--muted); font-size: 0.9rem; }
 
-    ul {
-      padding-left: 1.2rem;
-    }
+    ul { padding-left: 1.2rem; }
+    ul li + li { margin-top: 0.25rem; }
 
-    ul li + li {
-      margin-top: 0.25rem;
-    }
-
-    .projects-list .project {
-      margin-bottom: 1.2rem;
-    }
-
-    .project-title {
-      font-weight: 500;
-    }
-
-    .project-meta {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .project p {
-      margin-top: 0.25rem;
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); }
+    a:hover { text-decoration: underline; }
 
     footer {
       border-top: 1px solid var(--border);
@@ -194,7 +98,7 @@
       text-align: left;
     }
 
-    /* ===== Section images (About / Research / Projects) ===== */
+    /* ===== Section images (optional) ===== */
     .section-with-image {
       display: flex;
       gap: 1rem;
@@ -208,11 +112,16 @@
       flex-shrink: 0;
     }
 
-    .section-text {
-      flex: 1;
-    }
+    .section-text { flex: 1; }
 
-    /* ===== Hobbies layout ===== */
+    /* ===== Project layout ===== */
+    .projects-list .project { margin-bottom: 1.2rem; }
+    .project-title { font-weight: 600; }
+    .project-meta { font-size: 0.85rem; color: var(--muted); margin-top: 0.15rem; }
+    .project p { margin-top: 0.4rem; }
+    .project ul { margin-top: 0.4rem; }
+
+    /* ===== Beyond the Lab layout ===== */
     .hobbies-category {
       border: 1px solid var(--border);
       border-radius: 0.75rem;
@@ -234,19 +143,14 @@
     }
 
     .hobby-item-title {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.95rem;
       margin-bottom: 0.1rem;
     }
 
-    .hobby-item p {
-      font-size: 0.9rem;
-      margin-top: 0.1rem;
-    }
+    .hobby-item p { font-size: 0.9rem; margin-top: 0.1rem; }
 
-    .hobby-item-text {
-      flex: 1;
-    }
+    .hobby-item-text { flex: 1; }
 
     .hobby-item-image {
       width: 140px;
@@ -258,12 +162,10 @@
       margin-bottom: 0;
     }
 
-    /* Alternate PIC–TEXT / TEXT–PIC within each hobbies category */
-    .hobbies-category .hobby-item:nth-of-type(even) {
-      flex-direction: row-reverse;
-    }
+    /* Alternate PIC–TEXT / TEXT–PIC within each category */
+    .hobbies-category .hobby-item:nth-of-type(even) { flex-direction: row-reverse; }
 
-    /* For items with multiple images (e.g., Running) */
+    /* For items with multiple images */
     .hobby-item-images {
       display: flex;
       flex-direction: column;
@@ -271,25 +173,14 @@
       flex-shrink: 0;
     }
 
-    /* Stack image and text on small screens for the top sections and hobbies */
     @media (max-width: 600px) {
-      .section-with-image {
-        flex-direction: column;
-      }
-
-      .section-image {
-        max-width: 100%;
-      }
+      .section-with-image { flex-direction: column; }
+      .section-image { max-width: 100%; }
 
       .hobbies-category .hobby-item,
-      .hobbies-category .hobby-item:nth-of-type(even) {
-        flex-direction: column;
-      }
+      .hobbies-category .hobby-item:nth-of-type(even) { flex-direction: column; }
 
-      .hobby-item-image {
-        width: 100%;
-        height: auto;
-      }
+      .hobby-item-image { width: 100%; height: auto; }
     }
 
     @media (min-width: 768px) {
@@ -298,27 +189,27 @@
         justify-content: space-between;
         align-items: baseline;
       }
-
-      nav {
-        justify-content: flex-end;
-      }
+      nav { justify-content: flex-end; }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
       <div>
         <h1>Portfolio</h1>
         <p>
-          Personal Site
+          PhD-oriented portfolio: wearable sensing, digital health, and machine learning — with a curated “Beyond the Lab” section.
         </p>
       </div>
       <nav>
         <a href="#about">About</a>
         <a href="#research">Research Interests</a>
-        <a href="#projects">Projects</a>
-        <a href="#hobbies">Hobbies</a>
+        <a href="#featured">Featured Project</a>
+        <a href="#experience">Experience</a>
+        <a href="#beyond">Beyond the Lab</a>
+        <a href="#contact">CV & Contact</a>
       </nav>
     </header>
 
@@ -326,145 +217,264 @@
       <!-- ABOUT -->
       <section id="about" class="section-with-image">
         <!-- Optional image:
-        <img src="images/about.jpg" alt="About" class="section-image" />
+        <img src="images/about.jpg" alt="About" class="section-image" loading="lazy" />
         -->
         <div class="section-text">
           <h2>About</h2>
           <p>
-            I’m interested in wearable technology, data, and building things that connect research
-            with everyday life. I enjoy combining technical work with design and storytelling.
+            I build low-cost wearable sensing systems and machine-learning pipelines for real-world health monitoring.
+            I’m especially interested in gait and mobility, where signal processing and human-centered design can translate into
+            practical interventions outside the lab.
+          </p>
+          <p class="muted" style="margin-top:0.5rem;">
+            I care about technology that is useful and inclusive—open-source when possible, and designed around real constraints.
           </p>
         </div>
       </section>
 
-         <div class="hobby-item">
-            <img
-              src="images/hobbies-science-tech-people.jpg"
-              alt="Tech and people"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Tech and people</div>
-              <p>
-                I care about technology that is useful and accessible to people. I am especially
-                interested in open-source and inclusive design.
-              </p>
-            </div>
-          </div>
-      
       <!-- RESEARCH INTERESTS -->
       <section id="research" class="section-with-image">
         <!-- Optional image:
-        <img src="images/research.jpg" alt="Research" class="section-image" />
+        <img src="images/research.jpg" alt="Research" class="section-image" loading="lazy" />
         -->
         <div class="section-text">
           <h2>Research Interests</h2>
-          <p class="muted">
-          </p>
+
           <ul>
-            <li>Wearables</li>
-            <li>Digital Health</li>
-            <li>Machine Learning</li>
+            <li>
+              <strong>Wearables:</strong> sensing and embedded systems, low-cost instrumentation, and reliability in everyday environments.
+            </li>
+            <li>
+              <strong>Digital Health:</strong> mobility and gait monitoring, usability and adherence as research constraints, and deployable evaluation.
+            </li>
+            <li>
+              <strong>Machine Learning:</strong> time-series modeling, personalization (profiles), interpretability, and lightweight deployment.
+            </li>
           </ul>
         </div>
       </section>
 
-      <!-- PROJECTS -->
-      <section id="projects" class="section-with-image">
+      <!-- FEATURED PROJECT -->
+      <section id="featured" class="section-with-image">
         <!-- Optional image:
-        <img src="images/projects.jpg" alt="Projects" class="section-image" />
+        <img src="images/projects.jpg" alt="Projects" class="section-image" loading="lazy" />
         -->
         <div class="section-text">
-          <h2>Selected Projects</h2>
-          <p class="muted">
-          </p>
+          <h2>Featured Project</h2>
 
           <div class="projects-list">
             <div class="project">
               <div class="project-title">Smart Insole for Gait Analysis</div>
               <div class="project-meta">2025 · independent research project</div>
+
               <p>
-                I am designing a low-cost smart insole with FSR sensors and a Raspberry Pi to measure how people walk in
-                everyday environments. The system collects plantar pressure data, sends it over Bluetooth to a smartphone, 
-                and generates visualizations and logs for later analysis. I am currently testing it with a small group of 
-                3–4 people, and I am adding machine learning features to create gait profiles and send real-time alerts. 
-                This project combines my interests in wearable devices, circuit design, signal processing, and making
-                health-related technology more accessible.
+                I’m designing a low-cost smart insole using FSR sensors and a Raspberry Pi to measure plantar pressure during everyday walking.
+                The system streams data via Bluetooth to a smartphone for logging and visualization, with a roadmap toward real-time feedback.
+              </p>
+
+              <ul>
+                <li><strong>Problem:</strong> capture meaningful gait signals outside controlled lab settings.</li>
+                <li><strong>System:</strong> FSR-based sensing + embedded acquisition + phone-based visualization/logging.</li>
+                <li><strong>Methods:</strong> signal processing, feature extraction, and early work on ML-based gait profiling.</li>
+                <li><strong>Status:</strong> currently testing with a small group (3–4 people) and iterating on robustness and comfort.</li>
+                <li><strong>Next:</strong> personalized gait profiles and real-time alerts with careful validation.</li>
+              </ul>
+
+              <p class="muted">
+                This project combines wearable devices, circuit design, time-series data, and accessibility-driven engineering.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="project">
-              <div class="project-title">Professional Experience</div>
-              <div class="project-meta">Current · Sr Software Engineer </div>
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="projects-list">
+          <div class="project">
+            <div class="project-title">Engineering at Scale — Sr. Software Engineer</div>
+            <div class="project-meta">Current</div>
+            <p>
+              Developed and maintained modules for a proprietary web application used by executives across 11,000+ branches,
+              enabling efficient access, organization, and analysis of customer information to support credit decisions.
+            </p>
+          </div>
+
+          <div class="project">
+            <div class="project-title">Industry ML — Data Scientist</div>
+            <div class="project-meta">2022</div>
+            <ul>
+              <li>
+                Designed and implemented AML and anti-fraud strategy using AI/ML models for 90M+ customers across 25+ countries.
+              </li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <div class="project-title">Healthcare Systems — Lead Developer (Professional Residency)</div>
+            <div class="project-meta">2020 · Health Clinic</div>
+            <ul>
+              <li>Led full automation of inventory and medicine dispatch workflows.</li>
+              <li>Built a scheduling system to digitize appointment creation and tracking.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEYOND THE LAB -->
+      <section id="beyond">
+        <h2>Beyond the Lab</h2>
+        <p class="muted">
+          A curated view of what shapes how I work: curiosity, communication, design, and perspective.
+        </p>
+
+        <!-- 1) Curiosity & computational thinking -->
+        <div class="hobbies-category">
+          <h3>Curiosity & Computational Thinking</h3>
+
+          <div class="hobby-item">
+            <img
+              src="images/hobbies-color-rubiks-cube.jpeg"
+              alt="Rubik’s Cube"
+              class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Rubik’s Cube</div>
               <p>
-                Developed and maintained modules for the bank's proprietary web application used by executives across
-                11,000+ branches, enabling eficient access, organization, and analysis of customer information to support
-                credit decisions
+                Speedcubing is my tangible way of thinking about algorithms—patterns, heuristics, and optimization under constraints.
+                My personal best is around 19 seconds, and I like how it turns abstraction into practice.
               </p>
             </div>
+          </div>
 
-            <div class="project">
-              <div class="project-title">Professional Experience</div>
-              <div class="project-meta">2022 · Data Scientist </div>
+          <div class="hobby-item">
+            <img
+              src="images/hobbies-science-programming.jpg"
+              alt="Programming"
+              class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Programming</div>
               <p>
-                • Design and implementation of the AML and AntiFraud global strategy using AI and
-                machine learning models for 90M+ customers in 25+ countries
+                Programming is more than work for me—it’s a creative outlet for prototyping ideas and turning questions into systems that generate data.
+                I’m especially drawn to projects where the pipeline matters as much as the model (sensing, signals, visualization, deployment).
               </p>
             </div>
+          </div>
 
-            <div class="project">
-              <div class="project-title">Professional Residence</div>
-              <div class="project-meta">2020 · Lead Developer (Professional Residency)/ Health Clinic</div>
+          <div class="hobby-item">
+            <img
+              src="images/hobbies-life-random-facts.jpg"
+              alt="Reading and curiosity"
+              class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Reading & learning across topics</div>
               <p>
-                • Led the fully automation of the inventory and medicine dispatch process
-                • Assembled a scheduling system to digitalize the creation and tracking of appointments
+                I read daily across science, history, culture, and technology. That habit fuels my research questions and helps me connect ideas across domains.
               </p>
             </div>
           </div>
         </div>
 
-        
-      
-
-        
-      </section>
-
-      <!-- HOBBIES -->
-      <section id="hobbies">
-        <h2>Hobbies</h2>
-
-        <!-- 1. Fashion & Style -->
+        <!-- 2) Communication & storytelling -->
         <div class="hobbies-category">
-          <h3>Fashion & Style</h3>
+          <h3>Communication & Storytelling</h3>
 
           <div class="hobby-item">
             <img
-              src="images/hobbies-fashion-cosplayww.jpeg"
-              alt="Clothing"
+              src="images/hobbies-media-poetry.jpg"
+              alt="Poetry"
               class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
             />
             <div class="hobby-item-text">
-              <div class="hobby-item-title">Self Expression - Clothing</div>
+              <div class="hobby-item-title">Poetry (multilingual)</div>
               <p>
-                Clothing is one of my main forms of expression. I enjoy outfits that break monotony
-                and suggest a story or mood.
-
-                Cosplay lets me inhabit characters and worlds I love. It combines design, craft, and
-                performance in a playful way.
-
-                I took and completed modeling classes, which was an important accomplishment because
-                it pushed me out of my comfort zone and helped me develop confidence and presence.
+                Poetry taught me precision: choosing words the way you choose variables, with meaning and intent.
+                Writing in multiple languages helps me communicate the same idea to different audiences with clarity.
               </p>
             </div>
           </div>
 
           <div class="hobby-item">
-          
+            <img
+              src="images/hobbies-media-cinematography-horror.jpg"
+              alt="Cinematography"
+              class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Cinematography (especially horror)</div>
+              <p>
+                I enjoy analyzing how framing, sound, and silence shape perception and emotion.
+                It’s a fun way to think about attention and experience—ideas that connect naturally to designing tech people actually use.
+              </p>
+            </div>
+          </div>
+
+          <div class="hobby-item">
+            <img
+              src="images/hobbies-languages-german-english.jpg"
+              alt="German and English"
+              class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Languages</div>
+              <p>
+                Learning languages helps me understand different ways of thinking and communicating.
+                It also makes me more aware of how culture and context shape meaning.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3) Design & self-expression -->
+        <div class="hobbies-category">
+          <h3>Design & Self-Expression</h3>
+
+          <div class="hobby-item">
+            <img
+              src="images/hobbies-fashion-cosplayww.jpeg"
+              alt="Style and cosplay"
+              class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
+            />
+            <div class="hobby-item-text">
+              <div class="hobby-item-title">Style as design practice</div>
+              <p>
+                Clothing is one of my main forms of expression—color, texture, and silhouette are a kind of everyday design language.
+                Small visual choices communicate mood and identity, which mirrors how design decisions shape the usability of wearables.
+              </p>
+            </div>
+          </div>
+
+          <div class="hobby-item">
             <div class="hobby-item-text">
               <div class="hobby-item-title">Cosplay</div>
               <p>
-                Cosplay lets me inhabit characters and worlds I love. It combines design, craft, and
-                performance in a playful way.
+                Cosplay combines design, craft, and performance: you build, iterate, troubleshoot, and then present the result.
+                I love that mix of engineering-by-doing and storytelling—it feels similar to prototyping and user testing.
               </p>
             </div>
           </div>
@@ -474,290 +484,56 @@
               src="images/hobbies-fashion-modeling.jpeg"
               alt="Modeling"
               class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
             />
             <div class="hobby-item-text">
-              <div class="hobby-item-title">Modeling</div>
+              <div class="hobby-item-title">Presence & confidence</div>
               <p>
-                I enjoy posing for photos or styling looks. It is partly performance and partly a way
-                to see how ideas translate visually.
+                Taking modeling classes pushed me outside my comfort zone and helped me develop confidence and presence.
+                It made me more comfortable presenting ideas, receiving feedback, and showing up in new environments.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- 2. Conventions & Pop Culture -->
+        <!-- 4) Culture, identity & grounding -->
         <div class="hobbies-category">
-          <h3>Conventions & Pop Culture</h3>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-conventions-comiccon.jpeg"
-              alt="Comic-Con, Anime Expo, WonderCon"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Comic-Con, Anime Expo, WonderCon</div>
-              <p>
-                I have volunteered at conventions like Comic-Con, Anime Expo, and WonderCon. These
-                spaces taught me to interact with new people, work in teams, and appreciate the
-                communities around art and fandom.
-              </p>
-            </div>
-          </div>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-conventions-disney-vh1-snl.jpeg"
-              alt="Disney, VH1, SNL, The New Yorker"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Disney, VH1, SNL, The New Yorker</div>
-              <p>
-                I enjoy pop culture in many forms—from animation and music channels to sketch comedy
-                and cartoons. I like seeing how humor, design, and timing reflect collective ideas.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Color & Art -->
-        <div class="hobbies-category">
-          <h3>  Art</h3>
-
-         
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-color-rubiks-cube.jpeg"
-              alt="Rubik’s Cube"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Rubik’s Cube</div>
-              <p>
-                Solving a Rubik’s Cube quickly is a playful way to explore patterns and algorithms in a very tangible way. 
-                My personal best is approximately 19 seconds—though I haven’t practiced it recently.
-              </p>
-            </div>
-          </div>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-color-grace-hopper.jepg"
-              alt="Grace Hopper, applications, Canal Once"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Grace Hopper, Applications, Canal Once In Mexico</div>
-              <p>
-                I admire people and media that make technology more human. Stories about figures like
-                Grace Hopper. 
-                Since I was a child, Canal Once—a free public channel run by a university in Mexico City—was a major source of inspiration for me. 
-                Its children’s educational programs were creative, clear, and deeply inspiring, and they sparked my interest in learning and sharing knowledge from an early age.
-              </p>
-            </div>
-          </div>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-color-museumsspace.jpeg"
-              alt="Museums, painting, history"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Museums, painting, history</div>
-              <p>
-                Museums, painting, and history help me see how each era leaves traces in images and
-                narratives. I like watching how techniques and stories evolve over time.
-              </p>
-            </div>
-          </div>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-color-documentaries.jpg"
-              alt="Documentaries"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Documentaries</div>
-              <p>
-                I often watch documentaries about art, science, or culture to see how complex topics
-                can be explained clearly.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Cities & Culture -->
-        <div class="hobbies-category">
-          <h3>Cities & Culture</h3>
+          <h3>Culture, Identity & Grounding</h3>
 
           <div class="hobby-item">
             <img
               src="images/hobbies-cities-mexico-city.jpg"
               alt="Mexico City"
               class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
             />
             <div class="hobby-item-text">
               <div class="hobby-item-title">Mexico City</div>
               <p>
-             Mexico City inspires me with its layered history, museums, and neighborhoods—it feels like walking through many eras at once. 
-             Boleros and old songs give me a nostalgia for places and times I never lived, yet somehow feel connected to. I used to dream of sitting 
-             in a mythical old cantina in Mexico City, listening to boleros echo through the night.
+                Mexico City inspires me with its layered history, museums, and neighborhoods—it feels like walking through multiple eras at once.
+                It also reminds me that “useful” technology depends on context, access, and daily life.
               </p>
             </div>
           </div>
-
-         
 
           <div class="hobby-item">
             <img
               src="images/hobbies-cities-north-sinaloa.jpeg"
-              alt="North / Sinaloa"
+              alt="Northern Mexico / Sinaloa"
               class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
             />
             <div class="hobby-item-text">
-              <div class="hobby-item-title">North / Sinaloa</div>
+              <div class="hobby-item-title">Northern Mexico / Sinaloa</div>
               <p>
-                The north, especially its music and sense of identity, means more to me as I grow older. It’s not just that I “got older” and 
-                suddenly became nostalgic. It’s that I moved to a completely different city, where the culture feels worlds apart from what 
-                I grew up with. And now that the things I once took for granted aren’t “the normal” around me anymore, I appreciate them in a deeper,
-                more conscious way. The music, the accents, the food, the small habits—everything that shaped my idea of home—has become something 
-                I value not out of sentimentality, but out of recognition. Distance showed me how much it forms part of who I am.
-              </p>
-            </div>
-          </div>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-cities-tango.jpeg"
-              alt="Tango"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Tango</div>
-              <p>
-                I like the precision and emotion of tango, I love Valz tango. It
-                combines structure with intensity.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Media & Storytelling -->
-        <div class="hobbies-category">
-          <h3>Media & Storytelling</h3>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-media-cinematography-horror.jpg"
-              alt="Cinematography and horror films"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Cinematography and horror films</div>
-              <p>
-                I’ve also won movie trivia competitions, including twice winning the national Cinemex trivia by correctly predicting the Oscar results,
-                which earned me free movies for a year each time. I also won a regional trivia event hosted by a television network, which gave me access to premieres 
-                (unfortunately, this was in 2020…).
-                I enjoy analyzing cinematography, especially in horror films—how framing, sound, and silence work together to build tension.
-              </p>
-            </div>
-          </div>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-media-poetry.jpg"
-              alt="Poetry"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Poetry</div>
-              <p>
-                I enjoy poetry, especially modernist work, which I became more interested in after watching Paterson. I also enjoy haikus,
-                and I like writing poetry in three languages—it helps me play with rhythm, tone, and meaning in different ways.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Science & Learning -->
-        <div class="hobbies-category">
-          <h3>Science & Learning</h3>
-
-      
- 
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-science-programming.jpg"
-              alt="Programming"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Programming</div>
-              <p>
-           Programming is more than just work for me—it’s a creative outlet that lets me experiment, build, and bring ideas to life.
-           In a similar way, video games blend logic, narrative, and design, and I love how their interactive stories can feel different every time.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Languages & Expression -->
-        <div class="hobbies-category">
-          <h3>Languages & Expression</h3>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-languages-german-english.jpg"
-              alt="German and English"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">German and English</div>
-              <p>
-                Learning languages helps me understand different ways of thinking. Each new structure
-                or phrase opens a small window into another culture.
-              </p>
-            </div>
-          </div>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-languages-music-singing.jpg"
-              alt="Music and singing"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Music and singing</div>
-              <p>
-                I spend about 6% of my day—every single day—listening to music, and even more time outside a certain platform. Over the years, 
-                I’ve explored new genres, learned how samples are made, and gotten curious about the origins of different musical styles. 
-                I really enjoy listening to full albums, discovering how each track fits into a bigger story. 
-                Music and singing are ways for me to relax and express emotion. I enjoy songs that
-                tell stories or play with harmony.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Life & Motion -->
-        <div class="hobbies-category">
-          <h3>Life & Motion</h3>
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-life-dogs.jpg"
-              alt="Dogs"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Dogs</div>
-              <p>
-                Dogs make me laugh and keep me grounded. Their presence makes ordinary days better.
+                Being away from home made me value the culture I grew up with—music, accents, food, and everyday habits—in a deeper way.
+                That perspective keeps me grounded in building accessible technology that respects identity and lived experience.
               </p>
             </div>
           </div>
@@ -768,55 +544,58 @@
                 src="images/hobbies-life-running.jpeg"
                 alt="Running"
                 class="hobby-item-image"
+                loading="lazy"
+                width="140"
+                height="140"
               />
               <img
                 src="images/hobbies-life-runningHalf.jpeg"
-                alt="Running half-marathon"
+                alt="Half marathon"
                 class="hobby-item-image"
+                loading="lazy"
+                width="140"
+                height="140"
               />
             </div>
             <div class="hobby-item-text">
               <div class="hobby-item-title">Running</div>
               <p>
-                Running helps clear my mind and often gives me space to think through ideas or
-                decisions.
-              </p>
-            </div>
-          </div>
- 
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-life-food.jpg"
-              alt="Food"
-              class="hobby-item-image"
-            />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Food</div>
-              <p>
-                I also love exploring international gastronomy and discovering dishes from different cultures. Some of my favorites are Greek food (Gyros FTW),
-                “tacos árabes,” German dishes, Ecuadorian cuisine, arepas, sushi, Mexican-Chinese fusion, American, French, and Polish food, among many others.
-                Trying new flavors is one of my favorite ways to understand a place—its traditions, its people, and the little stories that live in its food.
+                Running clears my mind and builds long-term consistency. I like it because progress comes from patience and iteration—very similar to research.
               </p>
             </div>
           </div>
 
-      
-
           <div class="hobby-item">
             <img
-              src="images/hobbies-life-random-facts.jpg"
-              alt="Random facts"
+              src="images/hobbies-life-dogs.jpg"
+              alt="Dogs"
               class="hobby-item-image"
+              loading="lazy"
+              width="140"
+              height="140"
             />
             <div class="hobby-item-text">
-              <div class="hobby-item-title">Random facts</div>
+              <div class="hobby-item-title">Dogs</div>
               <p>
-                I spend about at least three hours a day reading about different topics.
+                Dogs keep me grounded and make ordinary days better. They’re my reminder to stay present and human in the middle of ambitious goals.
               </p>
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- CV & CONTACT -->
+      <section id="contact">
+        <h2>CV & Contact</h2>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+          <li><strong>CV:</strong> <a href="assets/JulietGQuintero_CV.pdf">Download PDF</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/your-handle">github.com/your-handle</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-handle/">linkedin.com/in/your-handle</a></li>
+        </ul>
+        <p class="muted" style="margin-top:0.5rem;">
+          (Replace the placeholders above with your real links.)
+        </p>
       </section>
     </main>
 
