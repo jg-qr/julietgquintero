@@ -1,13 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Juliet G Quintero — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Portfolio."
-  />
+  <meta name="description" content="Portfolio." />
 
   <style>
     :root {
@@ -20,7 +18,6 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -63,7 +60,10 @@
       border-radius: 999px;
     }
 
-    nav a:hover { color: var(--fg); background-color: #f3f4f6; }
+    nav a:hover {
+      color: var(--fg);
+      background-color: #f3f4f6;
+    }
 
     main {
       display: flex;
@@ -81,7 +81,6 @@
     }
 
     section p, section li { font-size: 0.95rem; }
-
     .muted { color: var(--muted); font-size: 0.9rem; }
 
     ul { padding-left: 1.2rem; }
@@ -98,7 +97,6 @@
       text-align: left;
     }
 
-    /* ===== Section images (optional) ===== */
     .section-with-image {
       display: flex;
       gap: 1rem;
@@ -114,14 +112,17 @@
 
     .section-text { flex: 1; }
 
-    /* ===== Project layout ===== */
     .projects-list .project { margin-bottom: 1.2rem; }
     .project-title { font-weight: 600; }
-    .project-meta { font-size: 0.85rem; color: var(--muted); margin-top: 0.15rem; }
+    .project-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+
     .project p { margin-top: 0.4rem; }
     .project ul { margin-top: 0.4rem; }
 
-    /* ===== Beyond the Lab layout ===== */
     .hobbies-category {
       border: 1px solid var(--border);
       border-radius: 0.75rem;
@@ -148,7 +149,10 @@
       margin-bottom: 0.1rem;
     }
 
-    .hobby-item p { font-size: 0.9rem; margin-top: 0.1rem; }
+    .hobby-item p {
+      font-size: 0.9rem;
+      margin-top: 0.1rem;
+    }
 
     .hobby-item-text { flex: 1; }
 
@@ -162,10 +166,10 @@
       margin-bottom: 0;
     }
 
-    /* Alternate PIC–TEXT / TEXT–PIC within each category */
-    .hobbies-category .hobby-item:nth-of-type(even) { flex-direction: row-reverse; }
+    .hobbies-category .hobby-item:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
 
-    /* For items with multiple images */
     .hobby-item-images {
       display: flex;
       flex-direction: column;
@@ -178,9 +182,14 @@
       .section-image { max-width: 100%; }
 
       .hobbies-category .hobby-item,
-      .hobbies-category .hobby-item:nth-of-type(even) { flex-direction: column; }
+      .hobbies-category .hobby-item:nth-of-type(even) {
+        flex-direction: column;
+      }
 
-      .hobby-item-image { width: 100%; height: auto; }
+      .hobby-item-image {
+        width: 100%;
+        height: auto;
+      }
     }
 
     @media (min-width: 768px) {
@@ -189,6 +198,7 @@
         justify-content: space-between;
         align-items: baseline;
       }
+
       nav { justify-content: flex-end; }
     }
   </style>
@@ -198,92 +208,65 @@
   <div class="page">
     <header>
       <div>
-        <h1>Juliet G Quintero </h1>
-       <p>
-        Color, music, and hardware and software integration
-      </p>
+        <h1>Juliet G Quintero</h1>
+        <p>Music, color and wearables.</p>
       </div>
+
       <nav>
-        <a href="#about">About</a>
         <a href="#research">Research Interests</a>
-        <a href="#featured">Featured Project</a>
+        <a href="#projects">Research Projects</a>
         <a href="#experience">Experience</a>
         <a href="#beyond">Beyond the Lab</a>
-        
       </nav>
     </header>
 
     <main>
-      <!-- ABOUT -->
-      <section id="about" class="section-with-image">
-        <!-- Optional image:
-        <img src="images/about.jpg" alt="About" class="section-image" loading="lazy" />
-        -->
-        <div class="section-text">
-          <h2>About</h2>
-          <p class="muted" style="margin-top:0.5rem;">
-            I care about technology that is useful and inclusive—open-source centered, and designed around real constraints.
-          </p>
-        </div>
-      </section>
-
       <!-- RESEARCH INTERESTS -->
       <section id="research" class="section-with-image">
-        <!-- Optional image:
-        <img src="images/research.jpg" alt="Research" class="section-image" loading="lazy" />
-        -->
         <div class="section-text">
           <h2>Research Interests</h2>
-
           <ul>
-           <li>
-  <strong>Software Dev:</strong> designing and maintaining production systems, with a focus on reliability, performance, and scalability under real-world constraints.
-</li>
-
-            <li>
-              <strong>Wearables:</strong> sensing and embedded systems, low-cost instrumentation, and reliability in everyday environments.
-            </li>
-            <li>
-              <strong>Digital Health:</strong> mobility and gait monitoring, usability and adherence as research constraints, and deployable evaluation.
-            </li>
-           
+            <li>Design &amp; Implementation of Biomedical Wearables</li>
+            <li>Sensor Integration &amp; Embedded Systems</li>
+            <li>Health Monitoring &amp; Rehabilitation</li>
           </ul>
         </div>
       </section>
 
-      <!-- FEATURED PROJECT -->
-      <section id="featured" class="section-with-image">
-        <!-- Optional image:
-        <img src="images/projects.jpg" alt="Projects" class="section-image" loading="lazy" />
-        -->
+      <!-- RESEARCH PROJECTS -->
+      <section id="projects" class="section-with-image">
         <div class="section-text">
-          <h2>Featured Project</h2>
+          <h2>Research Projects</h2>
 
           <div class="projects-list">
             <div class="project">
-              <div class="project-title">Smart Insole for Gait Analysis</div>
-              <div class="project-meta">2025 · independent research project</div>
+              <div class="project-title">
+                Low-Cost Instrumented Insole for Real-Time Gait Monitoring
+              </div>
 
-              <p>
-                I’m designing a low-cost smart insole using FSR sensors and a Raspberry Pi to measure plantar pressure during everyday walking.
-                The system streams data via Bluetooth to a smartphone for logging and visualization, with a roadmap toward real-time feedback.
-              </p>
+              <div class="project-meta">
+                2025 · J. G. Quintero Rocha, L. D. Espejo Jaramillo
+              </div>
 
               <ul>
-                <li><strong>Problem:</strong> Build a low-cost way to capture reliable real-world gait signals to support accessible monitoring and early risk detection beyond controlled lab settings.</li>
-                <li><strong>System:</strong> FSR-based sensing + embedded acquisition + phone-based visualization/logging.</li>
-                <li><strong>Methods:</strong> signal processing, feature extraction, and early work on ML-based gait profiling.</li>
-                <li><strong>Status:</strong> currently testing with a small group (3–4 people) and iterating on robustness and comfort.</li>
-                <li><strong>Next:</strong> personalized gait profiles and real-time alerts with careful validation.</li>
+                <li>
+                  Co-developed a wearable insole prototype using nine
+                  force-sensitive resistors positioned based on gait research.
+                </li>
+
+                <li>
+                  Integrated voltage dividers, ADC modules, a Raspberry Pi 4,
+                  and a custom Android app for real-time pressure
+                  visualization and data export. Built a functional
+                  prototype for under USD 85.
+                </li>
+
+                <li>
+                  <strong>Next Steps:</strong>
+                  Improve sensor reliability, refine the wearable design,
+                  and conduct further testing.
+                </li>
               </ul>
-
-
-              
-              <p class="muted">
-            
-  This project combines wearable devices, circuit design, and accessibility-driven engineering—plus the companion mobile app I built myself, leveraging my software engineering experience to design the UX and implement the full workflow: Bluetooth data capture, real-time visualization, and analysis features.
-</p>
-
             </div>
           </div>
         </div>
@@ -295,12 +278,14 @@
 
         <div class="projects-list">
           <div class="project">
-            <div class="project-title">Engineering at Scale — Sr. Software Engineer</div>
+            <div class="project-title">Sr. Software Engineer</div>
             <div class="project-meta">2022 - 2026</div>
             <p>
-               
-              Developed and maintained modules for a proprietary executive-facing web application used across 2,000+ branches,
-              enabling efficient access, organization, and analysis of customer information to support credit decisions—impacting services that reach tens of millions of customers.
+              Developed and maintained modules for a proprietary
+              executive-facing web application used across 2,000+ branches,
+              enabling efficient access, organization, and analysis of
+              customer information to support credit decisions—impacting
+              services that reach tens of millions of customers.
             </p>
           </div>
 
@@ -309,18 +294,21 @@
             <div class="project-meta">2022</div>
             <ul>
               <li>
-                Designed and implemented AML and anti-fraud strategy using AI/ML models for 90M+ customers across 25+ countries.
+                Designed and implemented AML and anti-fraud strategy using
+                AI/ML models for 90M+ customers across 25+ countries.
               </li>
             </ul>
           </div>
 
           <div class="project">
-            <div class="project-title">Healthcare Systems — Lead Developer (Professional Residency)</div>
-            <div class="project-meta">2020 · Health Clinic</div>
-            <ul>
-              <li>Led full automation of inventory and medicine dispatch workflows.</li>
-              <li>Built a scheduling system to digitize appointment creation and tracking.</li>
-            </ul>
+            <div class="project-title">
+              Audi de México — Software Planning Intern
+            </div>
+            <div class="project-meta">Oct 2020 – Jan 2021</div>
+            <p>
+              Designed a software concept to optimize real-estate and
+              equipment planning for new plant developments.
+            </p>
           </div>
         </div>
       </section>
@@ -329,10 +317,11 @@
       <section id="beyond">
         <h2>Beyond the Lab</h2>
         <p class="muted">
-          A curated view of what shapes how I work: curiosity, communication, design, and perspective.
+          A curated view of what shapes how I work: curiosity,
+          communication, design, and perspective.
         </p>
 
-        <!-- 1) Curiosity & computational thinking -->
+        <!-- CURIOSITY & COMPUTATIONAL THINKING -->
         <div class="hobbies-category">
           <h3>Curiosity & Computational Thinking</h3>
 
@@ -345,36 +334,45 @@
               width="140"
               height="140"
             />
+
             <div class="hobby-item-text">
-              <div class="hobby-item-title">Reading & learning across topics</div>
+              <div class="hobby-item-title">
+                Reading & learning across topics
+              </div>
               <p>
-                I read daily across science, history, culture, and technology. That habit fuels my research questions and helps me connect ideas across domains.
+                I read daily across science, history, culture, and
+                technology. That habit fuels my research questions
+                and helps me connect ideas across domains.
               </p>
             </div>
           </div>
 
           <div class="hobby-item">
-            
             <img
               src="images/hobbies-color-grace-hopper.jpeg"
               alt="Grace Hopper, applications, Canal Once"
               class="hobby-item-image"
             />
+
             <div class="hobby-item-text">
               <div class="hobby-item-title">Programming</div>
               <p>
-                Programming is more than work for me—it’s a creative outlet for prototyping ideas and turning questions into systems that generate data.
-                I’m especially drawn to projects where the pipeline matters as much as the model (sensing, signals, visualization, deployment).
+                Programming is a creative outlet for prototyping ideas
+                and turning questions into systems that solve problems.
               </p>
-               <p>
-                I admire people and media that make technology more human. Stories about figures like
-                Grace Hopper. 
-                Since I was a child, Canal Once—a free public channel run by a university in Mexico City—was a major source of inspiration for me. 
-                Its children’s educational programs were creative, clear, and deeply inspiring, and they sparked my interest in learning and sharing knowledge from an early age.
+              <p>
+                I admire people and media that make technology more
+                human. Stories about figures like Grace Hopper.
+                Since I was a child, Canal Once—a free public channel
+                run by a university in Mexico City—was a major source
+                of inspiration for me. Its children’s educational
+                programs were creative, clear, and deeply inspiring,
+                and they sparked my interest in learning and sharing
+                knowledge from an early age.
               </p>
             </div>
           </div>
-          
+
           <div class="hobby-item">
             <img
               src="images/hobbies-color-rubiks-e.png"
@@ -384,21 +382,18 @@
               width="140"
               height="140"
             />
+
             <div class="hobby-item-text">
               <div class="hobby-item-title">Rubik’s Cube</div>
               <p>
-                Speedcubing is my tangible way of thinking about algorithms—patterns, heuristics, and optimization under constraints.
-                My personal best is around 19 seconds, and I like how it turns abstraction into practice.
+                I find solving a Rubik’s Cube really relaxing,
+                and my personal record is 19 seconds!
               </p>
             </div>
           </div>
-
-          
-
-          
         </div>
 
-        <!-- 2) Communication & storytelling -->
+        <!-- COMMUNICATION & STORYTELLING -->
         <div class="hobbies-category">
           <h3>Communication & Storytelling</h3>
 
@@ -411,11 +406,12 @@
               width="140"
               height="140"
             />
+
             <div class="hobby-item-text">
               <div class="hobby-item-title">Multilingual poetry</div>
               <p>
-                Poetry taught me precision: choosing words the way you choose variables, with meaning and intent.
-                Writing in multiple languages helps me communicate the same idea to different audiences with clarity.
+                I find it fascinating how people can put emotions and
+                experiences into words in such creative and rhythmic ways.
               </p>
             </div>
           </div>
@@ -429,19 +425,18 @@
               width="140"
               height="140"
             />
+
             <div class="hobby-item-text">
-              <div class="hobby-item-title">Cinematography </div>
+              <div class="hobby-item-title">Cinematography</div>
               <p>
-                I enjoy analyzing how framing, sound, and silence shape perception and emotion.
-                It’s a fun way to think about attention.
-                I particularly enjoy horror films.
+                I enjoy analyzing how framing, sound, and silence shape
+                perception and emotion. I particularly enjoy horror films.
               </p>
             </div>
           </div>
-
         </div>
 
-        <!-- 3) Design & self-expression -->
+        <!-- DESIGN & SELF-EXPRESSION -->
         <div class="hobbies-category">
           <h3>Design & Self-Expression</h3>
 
@@ -454,37 +449,23 @@
               width="140"
               height="140"
             />
-            <div class="hobby-item-text">
-              <div class="hobby-item-title">Style as design practice</div>
-              <p>
-                Clothing is one of my main forms of expression—color, texture, and silhouette are a kind of everyday design language.
-                Small visual choices communicate mood and identity.
-              </p>
-            </div>
-          </div>
 
-         
-
-          <div class="hobby-item">
-            <img
-              src="images/hobbies-fashion-modeling.jpeg"
-              alt="Modeling"
-              class="hobby-item-image"
-              loading="lazy"
-              width="140"
-              height="140"
-            />
             <div class="hobby-item-text">
-              <div class="hobby-item-title">Presence & confidence</div>
+              <div class="hobby-item-title">
+                Style as design practice
+              </div>
               <p>
-                Taking modeling classes pushed me outside my comfort zone and helped me develop confidence and presence.
-                It made me more comfortable presenting ideas, receiving feedback, and showing up in new environments.
+                Clothing is one of my main forms of expression—color,
+                texture, and silhouette are a kind of everyday design
+                language. Small visual choices communicate mood and
+                identity. I also took modeling classes to step outside
+                my comfort zone.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- 4) Culture, identity & grounding -->
+        <!-- CULTURE, IDENTITY & GROUNDING -->
         <div class="hobbies-category">
           <h3>Culture, Identity & Grounding</h3>
 
@@ -497,11 +478,13 @@
               width="140"
               height="140"
             />
+
             <div class="hobby-item-text">
               <div class="hobby-item-title">Mexico City</div>
               <p>
-                Mexico City inspires me with its layered history, museums, and neighborhoods—it feels like walking through multiple eras at once.
-                 
+                Mexico City inspires me with its layered history,
+                museums, and neighborhoods—it feels like walking
+                through multiple eras at once.
               </p>
             </div>
           </div>
@@ -515,20 +498,23 @@
               width="140"
               height="140"
             />
-          
+
             <div class="hobby-item-text">
-              <div class="hobby-item-title">Northern Mexico / Banda</div>
+              <div class="hobby-item-title">
+                Northern Mexico / Banda
+              </div>
               <p>
-                Being away from home made me value the culture I grew up with—music, accents, food, and everyday habits—in a deeper way.
-                I also like that Northern banda has a polka connection, cultures travel.
-               
+                I'm originally from Sinaloa, but I lived most of my
+                life in Tijuana. I love how music connects different
+                places and cultures, from northern Mexican banda and
+                its polka influences to duranguense, which has a
+                connection to Chicago.
               </p>
             </div>
           </div>
 
           <div class="hobby-item">
             <div class="hobby-item-images">
-             
               <img
                 src="images/hobbies-life-runningHalfNyc1.png"
                 alt="Half marathon"
@@ -536,13 +522,15 @@
                 loading="lazy"
                 width="140"
                 height="140"
-          
               />
             </div>
+
             <div class="hobby-item-text">
               <div class="hobby-item-title">Running</div>
               <p>
-                Running clears my mind and builds long-term consistency. I like it because progress comes from patience and iteration.
+                Running clears my mind and builds long-term consistency.
+                I like it because progress comes from patience
+                and iteration.
               </p>
             </div>
           </div>
@@ -556,17 +544,16 @@
               width="140"
               height="140"
             />
+
             <div class="hobby-item-text">
               <div class="hobby-item-title">Dogs</div>
               <p>
-                Dogs keep me grounded and make ordinary days better. They’re my reminder to stay present and human in the middle of ambitious goals.
+                Dogs make ordinary days better. :)
               </p>
             </div>
           </div>
         </div>
       </section>
-
-     
     </main>
 
     <footer>
@@ -575,7 +562,8 @@
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 </body>
 </html>
